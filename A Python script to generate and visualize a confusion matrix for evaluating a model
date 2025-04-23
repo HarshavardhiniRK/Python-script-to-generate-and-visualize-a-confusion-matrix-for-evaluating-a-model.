@@ -3,15 +3,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-# Example: True labels and predicted labels
+# True labels and predicted labels
 y_true = [0, 1, 2, 2, 0, 1, 0, 2, 2, 1]
 y_pred = [0, 0, 2, 2, 0, 1, 1, 2, 1, 1]
 
-# Generate the confusion matrix
+# Generating confusion matrix
 cm = confusion_matrix(y_true, y_pred)
 labels = np.unique(y_true)
 
-# Plotting the confusion matrix
+# Plotting confusion matrix
 plt.figure(figsize=(8, 6))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels)
 plt.title('Confusion Matrix')
